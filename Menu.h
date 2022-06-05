@@ -7,7 +7,7 @@
 
 enum class MenuTreeOption
 {
-	Add			= 1,
+	Add		= 1,
 	Remove		= 2,
 	Find		= 3,
 	FindMinimal	= 4,
