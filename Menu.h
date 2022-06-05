@@ -16,7 +16,9 @@ enum class MenuTreeOption
 	Exit		= 7
 };
 
+void errorsPrint(int *errorCode, char *nameFunction);
 void PrintTree(BinaryTreeNode* node, int indent);
 void Menu(BinaryTree* binaryTree);
+int  mini_menu(int *menu_number);
 
 #endif //_MENU_H_
