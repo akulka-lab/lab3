@@ -91,7 +91,7 @@ void Menu(BinaryTree* binaryTree)
 {
 	InitializeTree(binaryTree);
 	int valueForMenu = -1;
-	int valueForTree;
+	int valueForTree = -1;
 	bool isValueForPrint = false;
 	int count = 1;
 	
@@ -158,7 +158,7 @@ void Menu(BinaryTree* binaryTree)
 		}
 		else if (valueForMenu == 6)
 		{
-			isValueForPrint = true;
+			isValueForPrint = True;
 		}
 		else if (valueForMenu == 7)
 		{
@@ -168,4 +168,27 @@ void Menu(BinaryTree* binaryTree)
 	}
 }
 
+void errorsPrint(int *errorCode, char *nameFunction)
+{
+    if(*errorCode == EMPTY_STRING)
+    {
+         printf(
+            " _______________________________________________________________________  \n"
+            "|                                                                       | \n"
+            "|                 You have nothing in the string!                       | \n"
+            "|____  _________________________________________________________________| \n"
+            "     |/                                                                   \n");
+    }
 
+    if(*errorCode == NULL_DELIM)
+    {
+         printf(
+            " _______________________________________________________________________  \n"
+            "|                                                                       | \n"
+            "|                       Delim is not defined....                        | \n"
+            "|____  _________________________________________________________________| \n"
+            "     |/                                                                   \n");
+    }
+
+    *errorCode = -1;
+}
