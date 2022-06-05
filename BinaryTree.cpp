@@ -8,6 +8,39 @@ void InitializeTree(BinaryTree* binaryTree)
 	binaryTree->Root = nullptr;
 }
 
+int my_strlen(const char* str)
+{
+    int len = 0;
+    while (str[len] != '\0')
+        len++;
+    return len;
+}
+
+void my_memcpy(char* newstr, char* str, int len)
+{
+    char* s1 = newstr;
+    char* s2 = str;
+
+    for (int i = 0; i < len; i++)
+    {
+        *(s1++) = *(s2++);
+    }
+}
+
+char wordob1(char* str, int n, int len1, int dlina)
+{
+    for (int j = 0; j < n; j++)
+    {
+        char tmp = str[0];
+        for (int i = 0; i < len1; i++)
+        {
+            str[i] = str[i + 1];
+        }
+
+        str[len1] = tmp;
+    }
+}
+
 
 BinaryTreeNode* Find(BinaryTreeNode* node, const int value)
 {
