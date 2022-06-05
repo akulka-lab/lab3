@@ -8,6 +8,34 @@
 
 using namespace std;
 
+int* mini_menu(int *menu_number)
+{
+    printf(
+    " _______________________________________________________________________  \n"
+    "|                                                                       | \n"
+    "|                          Select menu item:                            | \n"
+    "|                                                                       | \n"
+    "|   1  -> Input with keyboard                                           | \n"
+    "|   2  -> Concatenate                                                   | \n"
+    "|   3  -> Get substring from i to j                                     | \n"
+    "|   4  -> Split into words                                              | \n"
+    "|   5  -> Print out                                                     | \n"
+    "|                                                                       | \n"
+    "|   0 -> Exit                                                           | \n"
+    "|____  _________________________________________________________________| \n"
+    "     |/                                                                   \n"
+    "                                                                          \n");
+    scanf("%d", &menu_number);
+
+    while (menu_number < 0 && menu_number > 5)
+    {
+        printf("Try again\n");
+        scanf("%d",&menu_number);
+    }
+
+    return menu_number;
+}
+
 void PrintTree(BinaryTreeNode* node, int indent)
 {
 	if (node == nullptr)
